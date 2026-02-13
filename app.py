@@ -598,6 +598,30 @@ st.markdown("""
         margin: 2rem 0;
         animation: fadeIn 1s ease-out;
     }
+    
+    /* Radio Buttons - Enhanced */
+    .stRadio > div {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        padding: 1rem;
+        border-radius: 15px;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+    }
+    
+    .stRadio > div:hover {
+        border-color: #667eea;
+        box-shadow: 0 3px 10px rgba(102, 126, 234, 0.15);
+    }
+    
+    /* Camera Input */
+    [data-testid="stCameraInput"] {
+        border-radius: 15px;
+        transition: all 0.3s ease;
+    }
+    
+    [data-testid="stCameraInput"]:hover {
+        box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -720,7 +744,12 @@ def main():
             4. **Ensure fish are visible** and not overlapping too much
             5. **Good contrast** between fish and background
             
-           
+            **📸 Camera Feature:**
+            - Works on **Streamlit Cloud** (deployed app)
+            - Works on **HTTPS** connections
+            - May not work on local HTTP (use upload instead)
+            
+            ⚠️ **Note:** If model doesn't detect well, it may need more training on Kaggle.
             """)
     
     # Main Content Area - Clean 2026 Design
@@ -749,19 +778,45 @@ The model file size is small ({:.1f} MB), suggesting it may not be fully trained
     col1, col2 = st.columns([1, 1], gap="large")
     
     with col1:
-        st.markdown("### Upload Fish Image")
-        st.markdown("<p style='color: #6c757d; margin-bottom: 1.5rem;'>Drag and drop or click to upload JPG, JPEG, or PNG images</p>", unsafe_allow_html=True)
+        st.markdown("### Get Fish Image")
         
-        uploaded_file = st.file_uploader(
-            "Choose a fish image...",
-            type=["jpg", "jpeg", "png"],
-            help="Upload clear, well-lit images of fish for best detection results",
-            label_visibility="collapsed"
+        # Input method selector
+        input_method = st.radio(
+            "Choose input method:",
+            options=["📤 Upload Image", "📸 Take Photo"],
+            horizontal=True,
+            label_visibility="visible"
         )
         
-        if uploaded_file is not None:
-            # Load and display original image
-            image = Image.open(uploaded_file)
+        image = None
+        
+        if input_method == "📤 Upload Image":
+            st.markdown("<p style='color: #6c757d; margin-bottom: 1.5rem;'>Drag and drop or click to upload JPG, JPEG, or PNG images</p>", unsafe_allow_html=True)
+            
+            uploaded_file = st.file_uploader(
+                "Choose a fish image...",
+                type=["jpg", "jpeg", "png"],
+                help="Upload clear, well-lit images of fish for best detection results",
+                label_visibility="collapsed"
+            )
+            
+            if uploaded_file is not None:
+                image = Image.open(uploaded_file)
+        
+        else:  # Take Photo
+            st.markdown("<p style='color: #6c757d; margin-bottom: 1.5rem;'>Click the button below to capture an image from your camera</p>", unsafe_allow_html=True)
+            
+            camera_photo = st.camera_input(
+                "Take a photo",
+                help="Capture a clear, well-lit image of fish",
+                label_visibility="collapsed"
+            )
+            
+            if camera_photo is not None:
+                image = Image.open(camera_photo)
+        
+        # Display image if available
+        if image is not None:
             st.markdown("### 📷 Original Image")
             st.markdown('<div class="image-container">', unsafe_allow_html=True)
             st.image(image, use_column_width=True)
