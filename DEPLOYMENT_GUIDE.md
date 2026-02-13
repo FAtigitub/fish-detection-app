@@ -63,5 +63,32 @@ git push -u origin main
 
 ⚠️ **Camera Note:** Camera capture only works on Streamlit Cloud or HTTPS. For local testing, use "Upload Image".
 
+## 🔧 Troubleshooting Deployment
+
+### Error: "No solution found when resolving dependencies"
+**Cause:** Python version incompatibility
+
+**Solution:** Ensure `.python-version` file exists with content:
+```
+3.11
+```
+
+This file is already included and specifies Python 3.11 for compatibility.
+
+### Error: "torch has no wheels with matching Python ABI tag"
+**Fixed!** Updated `requirements.txt` to use flexible versions (>=) instead of exact versions (==)
+
+### Deployment Still Fails?
+1. Check GitHub repo has all files:
+   - ✅ app.py
+   - ✅ best.pt
+   - ✅ requirements.txt
+   - ✅ .python-version
+   - ✅ .streamlit/config.toml
+
+2. Try restarting the app in Streamlit Cloud dashboard
+
+3. Check logs in "Manage App" for specific errors
+
 ## Need help?
 See README.md for detailed instructions
