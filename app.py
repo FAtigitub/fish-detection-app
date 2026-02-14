@@ -697,7 +697,7 @@ def main():
         
         use_tta = st.checkbox(
             "Test Time Augmentation (TTA)",
-            value=False,
+            value=True,
             help="Slower but may improve detection accuracy"
         )
         
@@ -1115,7 +1115,7 @@ DETECTIONS:
         
         with col_sp2:
             st.markdown("""
-            8. ✅ Rastrelliger Kanagurta (Indian Mackerel) - mAP50-95: 0.718
+            8. ✅ Rastrelliger Kanagurta (Mackerel) - mAP50-95: 0.718
             9. <span style='color: #10b981; font-weight: 600;'>🟢 Scaridae (Parrotfish) - mAP50-95: 0.873</span>
             10. ✅ Thunnus Alalunga (Albacore Tuna) - mAP50-95: 0.689
             11. <span style='color: #10b981; font-weight: 600;'>🟢 Thunnus Obesus (Bigeye Tuna) - mAP50-95: 0.860</span>
