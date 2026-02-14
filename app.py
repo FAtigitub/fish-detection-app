@@ -745,8 +745,7 @@ def main():
             - Works on **Streamlit Cloud** (deployed app)
             - Works on **HTTPS** connections
             - May not work on local HTTP (use upload instead)
-            
-            ⚠️ **Note:** If model doesn't detect well, it may need more training on Kaggle.
+          
             """)
     
     # Main Content Area - Clean 2026 Design
