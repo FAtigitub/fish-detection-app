@@ -1131,19 +1131,7 @@ DETECTIONS:
             19. <span style='color: #10b981; font-weight: 600;'>🟢 Upeneus Moluccensis (Goldband Goatfish) - mAP: 0.991</span>
             """, unsafe_allow_html=True)
         
-        st.markdown("<div style='height: 0.5rem;'></div>", unsafe_allow_html=True)
-        st.warning("""
-        🚨 **CRITICAL: SARDINE Training Issue**
-        
-        Your target species (SARDINE) has only **1 training image**! This is extremely insufficient:
-        - High mAP (0.995) is misleading - it's perfect on that 1 image only
-        - Model won't generalize to detect other sardines
-        - Minimum recommended: 50-100 images per class
-        - For production quality: 500+ images
-        
-        **Action Required:** Get more sardine images and retrain!
-        """)
-        
+      
         st.info("""
         **Model Performance Summary:**
         - Overall mAP50: **0.713** | mAP50-95: 0.574
