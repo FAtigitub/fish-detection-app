@@ -1097,35 +1097,48 @@ DETECTIONS:
             """)
     
     # Species Reference
-    with st.expander("Complete Species List (19 Total)", expanded=False):
+    with st.expander("Complete Species List (19 Total) - Detection Performance", expanded=False):
+        st.markdown("""
+        **Legend:** 🟢 Excellent (mAP≥0.99) | ✅ Good (mAP≥0.90) | ⚠️ Needs Training (mAP=0)
+        """)
+        
         col_sp1, col_sp2 = st.columns(2)
         
         with col_sp1:
             st.markdown("""
-            1. Alepes Djedaba (Round Scad)
-            2. Atropus Atropos (Clupea)
-            3. Caranx Ignobilis (Giant Trevally)
-            4. Chanos Chanos (Milkfish)
-            5. Decapterus Macarellus (Mackerel Scad)
-            6. Euthynnus Affinis (Kawakawa Bonito)
-            7. Katsuwonus Pelamis (Skipjack Tuna)
-            8. Lutjanus Malabaricus (Malabar Red Snapper)
-            9. Parastromateus Niger (Black Pomfret)
-            10. Rastrelliger Kanagurta (Indian Mackerel)
-            """)
+            1. ⚠️ Alepes Djedaba (Round Scad) - *Not detected*
+            2. ⚠️ Atropus Atropos (Clupea) - *Not detected*
+            3. ⚠️ Caranx Ignobilis (Giant Trevally) - *Not detected*
+            4. <span style='color: #10b981; font-weight: 600;'>🟢 Chanos Chanos (Milkfish) - mAP: 0.991</span>
+            5. Decapterus Macarellus (Mackerel Scad) - mAP: 0.789
+            6. Euthynnus Affinis (Kawakawa Bonito) - *No data*
+            7. <span style='color: #10b981; font-weight: 600;'>🟢 Katsuwonus Pelamis (Skipjack Tuna) - mAP: 0.995</span>
+            8. ✅ Lutjanus Malabaricus (Malabar Red Snapper) - mAP: 0.908
+            9. Parastromateus Niger (Black Pomfret) - *No data*
+            10. ✅ Rastrelliger Kanagurta (Indian Mackerel) - mAP: 0.900
+            """, unsafe_allow_html=True)
         
         with col_sp2:
             st.markdown("""
-            11. Rastrelliger sp (Mackerel Species)
-            12. Scaridae (Parrotfish)
-            13. Scomber Japonicus (Chub Mackerel)
-            14. Scomberomorus Guttatus (Indo-Pacific King Mackerel)
-            15. Thunnus Alalunga (Albacore Tuna)
-            16. Thunnus Obesus (Bigeye Tuna)
-            17. Thunnus Tonggol (Longtail Tuna)
-            18. **Tribus Sardini (SARDINE)** - Target Species
-            19. Upeneus Moluccensis (Goldband Goatfish)
-            """)
+            11. Rastrelliger sp (Mackerel Species) - *No data*
+            12. <span style='color: #10b981; font-weight: 600;'>🟢 Scaridae (Parrotfish) - mAP: 0.995</span>
+            13. Scomber Japonicus (Chub Mackerel) - *No data*
+            14. Scomberomorus Guttatus (Indo-Pacific King Mackerel) - *No data*
+            15. Thunnus Alalunga (Albacore Tuna) - mAP: 0.853
+            16. ✅ Thunnus Obesus (Bigeye Tuna) - mAP: 0.965
+            17. Thunnus Tonggol (Longtail Tuna) - *No data*
+            18. <span style='color: #10b981; font-weight: 600;'>🟢 **Tribus Sardini (SARDINE)** - mAP: 0.995</span> ⭐ *Target*
+            19. ✅ Upeneus Moluccensis (Goldband Goatfish) - mAP: 0.971
+            """, unsafe_allow_html=True)
+        
+        st.markdown("<div style='height: 0.5rem;'></div>", unsafe_allow_html=True)
+        st.info("""
+        **Model Performance Summary:**
+        - Overall mAP50: 0.720 | mAP50-95: 0.573
+        - Precision: 0.658 | Recall: 0.716
+        - Best Detection: Skipjack Tuna, Parrotfish, SARDINE (0.995 each)
+        - Species needing more training: Round Scad, Clupea, Giant Trevally
+        """)
     
     # Footer
     st.markdown("<div style='height: 2rem;'></div>", unsafe_allow_html=True)
