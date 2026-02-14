@@ -1099,45 +1099,58 @@ DETECTIONS:
     # Species Reference
     with st.expander("Complete Species List (19 Total) - Detection Performance", expanded=False):
         st.markdown("""
-        **Legend:** 🟢 Excellent (mAP≥0.99) | ✅ Good (mAP≥0.90) | ⚠️ Needs Training (mAP=0)
+        **Legend:** 🟢 Excellent (mAP≥0.98) | ✅ Good (mAP≥0.85) | ⚠️ Poor/Needs Training (mAP<0.80 or 0)
         """)
         
         col_sp1, col_sp2 = st.columns(2)
         
         with col_sp1:
             st.markdown("""
-            1. ⚠️ Alepes Djedaba (Round Scad) - *Not detected*
-            2. ⚠️ Atropus Atropos (Clupea) - *Not detected*
-            3. ⚠️ Caranx Ignobilis (Giant Trevally) - *Not detected*
-            4. <span style='color: #10b981; font-weight: 600;'>🟢 Chanos Chanos (Milkfish) - mAP: 0.991</span>
-            5. Decapterus Macarellus (Mackerel Scad) - mAP: 0.789
-            6. Euthynnus Affinis (Kawakawa Bonito) - *No data*
-            7. <span style='color: #10b981; font-weight: 600;'>🟢 Katsuwonus Pelamis (Skipjack Tuna) - mAP: 0.995</span>
-            8. ✅ Lutjanus Malabaricus (Malabar Red Snapper) - mAP: 0.908
-            9. Parastromateus Niger (Black Pomfret) - *No data*
-            10. ✅ Rastrelliger Kanagurta (Indian Mackerel) - mAP: 0.900
+            1. ⚠️ Alepes Djedaba (Round Scad) - mAP: 0.000 (*141 images, not detecting*)
+            2. ⚠️ Atropus Atropos (Clupea) - mAP: 0.000 (*139 images, not detecting*)
+            3. ⚠️ Caranx Ignobilis (Giant Trevally) - mAP: 0.000 (*1 image only*)
+            4. <span style='color: #10b981; font-weight: 600;'>🟢 Chanos Chanos (Milkfish) - mAP: 0.985</span>
+            5. ⚠️ Decapterus Macarellus (Mackerel Scad) - mAP: 0.740
+            6. Euthynnus Affinis (Kawakawa Bonito) - *No validation data*
+            7. <span style='color: #10b981; font-weight: 600;'>🟢 Katsuwonus Pelamis (Skipjack Tuna) - mAP: 0.982</span>
+            8. ✅ Lutjanus Malabaricus (Malabar Red Snapper) - mAP: 0.871
+            9. Parastromateus Niger (Black Pomfret) - *No validation data*
+            10. ⚠️ Rastrelliger Kanagurta (Indian Mackerel) - mAP: 0.811
             """, unsafe_allow_html=True)
         
         with col_sp2:
             st.markdown("""
-            11. Rastrelliger sp (Mackerel Species) - *No data*
-            12. <span style='color: #10b981; font-weight: 600;'>🟢 Scaridae (Parrotfish) - mAP: 0.995</span>
-            13. Scomber Japonicus (Chub Mackerel) - *No data*
-            14. Scomberomorus Guttatus (Indo-Pacific King Mackerel) - *No data*
-            15. Thunnus Alalunga (Albacore Tuna) - mAP: 0.853
-            16. ✅ Thunnus Obesus (Bigeye Tuna) - mAP: 0.965
-            17. Thunnus Tonggol (Longtail Tuna) - *No data*
-            18. <span style='color: #10b981; font-weight: 600;'>🟢 **Tribus Sardini (SARDINE)** - mAP: 0.995</span> ⭐ *Target*
-            19. ✅ Upeneus Moluccensis (Goldband Goatfish) - mAP: 0.971
+            11. Rastrelliger sp (Mackerel Species) - *No validation data*
+            12. <span style='color: #10b981; font-weight: 600;'>🟢 Scaridae (Parrotfish) - mAP: 0.987</span>
+            13. Scomber Japonicus (Chub Mackerel) - *No validation data*
+            14. Scomberomorus Guttatus (Indo-Pacific King Mackerel) - *No validation data*
+            15. ✅ Thunnus Alalunga (Albacore Tuna) - mAP: 0.952
+            16. ✅ Thunnus Obesus (Bigeye Tuna) - mAP: 0.958
+            17. Thunnus Tonggol (Longtail Tuna) - *No validation data*
+            18. <span style='color: #fb923c; font-weight: 600;'>⚠️ **Tribus Sardini (SARDINE)** - mAP: 0.995</span> ⭐ *Target* 🚨 **ONLY 1 IMAGE!**
+            19. <span style='color: #10b981; font-weight: 600;'>🟢 Upeneus Moluccensis (Goldband Goatfish) - mAP: 0.991</span>
             """, unsafe_allow_html=True)
         
         st.markdown("<div style='height: 0.5rem;'></div>", unsafe_allow_html=True)
+        st.warning("""
+        🚨 **CRITICAL: SARDINE Training Issue**
+        
+        Your target species (SARDINE) has only **1 training image**! This is extremely insufficient:
+        - High mAP (0.995) is misleading - it's perfect on that 1 image only
+        - Model won't generalize to detect other sardines
+        - Minimum recommended: 50-100 images per class
+        - For production quality: 500+ images
+        
+        **Action Required:** Get more sardine images and retrain!
+        """)
+        
         st.info("""
         **Model Performance Summary:**
-        - Overall mAP50: 0.720 | mAP50-95: 0.573
-        - Precision: 0.658 | Recall: 0.716
-        - Best Detection: Skipjack Tuna, Parrotfish, SARDINE (0.995 each)
-        - Species needing more training: Round Scad, Clupea, Giant Trevally
+        - Overall mAP50: **0.713** | mAP50-95: 0.574
+        - Precision: 0.664 | Recall: 0.690
+        - **Top 3 Detection:** Goldband Goatfish (0.991), Parrotfish (0.987), Milkfish (0.985)
+        - **Critical Issues:** Round Scad (0), Clupea (0), Giant Trevally (0), **SARDINE (only 1 image)**
+        - Species needing more training images: Round Scad, Clupea, Giant Trevally, SARDINE
         """)
     
     # Footer
