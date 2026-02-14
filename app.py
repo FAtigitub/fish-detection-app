@@ -662,7 +662,7 @@ def main():
             "Confidence Threshold",
             min_value=0.0,
             max_value=1.0,
-            value=0.15,
+            value=0.20,
             step=0.05,
             help="Lower values detect more fish but may include false positives"
         )
