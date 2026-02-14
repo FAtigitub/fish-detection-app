@@ -31,15 +31,15 @@ st.markdown("""
     /* Hero Section - Enhanced with animation */
     .hero-section {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 3rem 2rem;
-        border-radius: 25px;
+        padding: 1.5rem 2rem;
+        border-radius: 15px;
         text-align: center;
         color: white;
-        margin-bottom: 2rem;
-        box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        margin-bottom: 1.5rem;
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
         position: relative;
         overflow: hidden;
-        animation: fadeInDown 0.8s ease-out;
+        animation: fadeInDown 0.6s ease-out;
     }
     
     .hero-section::before {
@@ -70,13 +70,13 @@ st.markdown("""
     }
     
     .hero-title {
-        font-size: 3.5rem;
-        font-weight: 800;
-        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         position: relative;
         z-index: 1;
-        animation: slideIn 1s ease-out;
+        animation: slideIn 0.7s ease-out;
     }
     
     @keyframes slideIn {
@@ -91,28 +91,28 @@ st.markdown("""
     }
     
     .hero-subtitle {
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: 400;
         opacity: 0.95;
-        margin-top: 0.5rem;
+        margin-top: 0.2rem;
         position: relative;
         z-index: 1;
-        animation: slideIn 1.2s ease-out;
+        animation: slideIn 0.8s ease-out;
     }
     
     /* Stats Cards - Enhanced with attractive animations */
     .stats-card {
         background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-        padding: 2rem;
-        border-radius: 20px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        padding: 1.2rem;
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         border: 1px solid rgba(102, 126, 234, 0.1);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        margin: 1rem 0;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        margin: 0.5rem 0;
         position: relative;
         overflow: hidden;
         cursor: pointer;
-        animation: fadeInUp 0.6s ease-out;
+        animation: fadeInUp 0.5s ease-out;
     }
     
     @keyframes fadeInUp {
@@ -142,21 +142,21 @@ st.markdown("""
     }
     
     .stats-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 15px 40px rgba(102, 126, 234, 0.25);
+        transform: translateY(-5px) scale(1.01);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
         border-color: rgba(102, 126, 234, 0.3);
     }
     
     .stat-value {
-        font-size: 3.5rem;
-        font-weight: 800;
+        font-size: 2.5rem;
+        font-weight: 700;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         margin: 0;
         line-height: 1;
-        animation: countUp 1s ease-out;
+        animation: countUp 0.7s ease-out;
     }
     
     @keyframes countUp {
@@ -171,22 +171,22 @@ st.markdown("""
     }
     
     .stat-label {
-        font-size: 1rem;
+        font-size: 0.85rem;
         color: #6c757d;
         font-weight: 600;
-        margin-top: 0.5rem;
+        margin-top: 0.4rem;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
     }
     
     /* Fish Alert */
     .fish-alert {
         background: linear-gradient(135deg, #ffd89b 0%, #fb923c 100%);
         color: white;
-        padding: 1.5rem;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(251, 146, 60, 0.3);
-        margin: 1.5rem 0;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(251, 146, 60, 0.3);
+        margin: 1rem 0;
         font-weight: 600;
         animation: pulse 2s infinite;
     }
@@ -199,29 +199,29 @@ st.markdown("""
     /* Detection Box */
     .detection-box {
         background: white;
-        padding: 1.5rem;
-        border-radius: 15px;
-        border-left: 5px solid #667eea;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-        margin: 1rem 0;
+        padding: 0.8rem;
+        border-radius: 8px;
+        border-left: 4px solid #667eea;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        margin: 0.5rem 0;
         transition: all 0.3s ease;
     }
     
     .detection-box:hover {
-        box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-        transform: translateX(5px);
+        box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        transform: translateX(3px);
     }
     
     .detection-title {
         font-weight: 600;
         color: #2d3748;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
     
     .detection-value {
         color: #667eea;
-        font-weight: 700;
-        font-size: 1rem;
+        font-weight: 600;
+        font-size: 0.95rem;
     }
     
     /* Buttons - Enhanced with Ripple Effect */
@@ -229,14 +229,14 @@ st.markdown("""
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
         border: none;
-        border-radius: 50px;
-        padding: 1rem 3rem;
-        font-weight: 700;
-        font-size: 1.1rem;
+        border-radius: 8px;
+        padding: 0.6rem 1.5rem;
+        font-weight: 600;
+        font-size: 1rem;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
+        box-shadow: 0 3px 12px rgba(102, 126, 234, 0.35);
+        text-transform: none;
+        letter-spacing: 0.5px;
         position: relative;
         overflow: hidden;
         cursor: pointer;
@@ -261,44 +261,45 @@ st.markdown("""
     }
     
     .stButton > button:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.6);
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
         background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
     }
     
     .stButton > button:active {
-        transform: translateY(-1px) scale(1.02);
-        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        transform: translateY(0px) scale(1);
+        box-shadow: 0 3px 10px rgba(102, 126, 234, 0.4);
     }
     
     /* File Uploader - Enhanced */
     .uploadedFile {
-        border-radius: 15px;
+        border-radius: 10px;
         border: 2px solid #667eea;
-        padding: 1rem;
+        padding: 0.8rem;
         background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
         transition: all 0.3s ease;
-        animation: fadeInUp 0.5s ease-out;
+        animation: fadeInUp 0.4s ease-out;
     }
     
     .uploadedFile:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+        transform: translateY(-2px);
+        box-shadow: 0 3px 15px rgba(102, 126, 234, 0.2);
         border-color: #764ba2;
     }
     
     /* Expander - Enhanced */
     .streamlit-expanderHeader {
         background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-        border-radius: 10px;
+        border-radius: 8px;
         border: 1px solid #e2e8f0;
         transition: all 0.3s ease;
+        font-size: 0.95rem;
     }
     
     .streamlit-expanderHeader:hover {
         background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
         border-color: #667eea;
-        box-shadow: 0 3px 10px rgba(102, 126, 234, 0.15);
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.12);
     }
     
     /* Download Button */
@@ -306,16 +307,17 @@ st.markdown("""
         background: linear-gradient(135deg, #10b981 0%, #059669 100%);
         color: white;
         border: none;
-        border-radius: 50px;
-        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        padding: 0.6rem 1.2rem;
         font-weight: 600;
+        font-size: 0.95rem;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+        box-shadow: 0 3px 12px rgba(16, 185, 129, 0.35);
     }
     
     .stDownloadButton > button:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.6);
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 5px 18px rgba(16, 185, 129, 0.5);
         background: linear-gradient(135deg, #059669 0%, #10b981 100%);
     }
     
@@ -329,8 +331,8 @@ st.markdown("""
         background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #667eea 100%);
         background-size: 200% 100%;
         animation: progressShimmer 2s linear infinite;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(102, 126, 234, 0.4);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
     }
     
     @keyframes progressShimmer {
@@ -345,12 +347,13 @@ st.markdown("""
     /* Info Box - Enhanced */
     .info-box {
         background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
-        padding: 1.5rem;
-        border-radius: 15px;
-        border-left: 5px solid #3b82f6;
-        margin: 1rem 0;
-        animation: slideInRight 0.5s ease-out;
+        padding: 1rem;
+        border-radius: 10px;
+        border-left: 4px solid #3b82f6;
+        margin: 0.8rem 0;
+        animation: slideInRight 0.4s ease-out;
         transition: all 0.3s ease;
+        font-size: 0.95rem;
     }
     
     @keyframes slideInRight {
@@ -365,8 +368,8 @@ st.markdown("""
     }
     
     .info-box:hover {
-        transform: translateX(-5px);
-        box-shadow: 0 5px 20px rgba(59, 130, 246, 0.3);
+        transform: translateX(-3px);
+        box-shadow: 0 3px 12px rgba(59, 130, 246, 0.25);
     }
         margin: 1rem 0;
     }
@@ -374,10 +377,10 @@ st.markdown("""
     /* 2026 Clean Design Standards - Enhanced Interactive */
     .upload-section {
         background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-        padding: 3rem;
-        border-radius: 20px;
+        padding: 2rem;
+        border-radius: 12px;
         border: 2px dashed #667eea;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
         overflow: hidden;
         animation: pulse 2s ease-in-out infinite;
@@ -397,8 +400,8 @@ st.markdown("""
     .upload-section:hover {
         border-color: #764ba2;
         background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-        transform: scale(1.02);
-        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        transform: scale(1.01);
+        box-shadow: 0 5px 20px rgba(102, 126, 234, 0.15);
         animation: none;
     }
     
@@ -407,17 +410,17 @@ st.markdown("""
         font-weight: 600;
         color: #1a202c;
         margin-bottom: 0.5rem;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     
     /* Success Box - Enhanced */
     .success-box {
         background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-        padding: 1.5rem;
-        border-radius: 15px;
-        border-left: 5px solid #10b981;
-        margin: 1rem 0;
-        animation: slideInLeft 0.5s ease-out;
+        padding: 0.8rem;
+        border-radius: 10px;
+        border-left: 4px solid #10b981;
+        margin: 0.5rem 0;
+        animation: slideInLeft 0.4s ease-out;
         transition: all 0.3s ease;
     }
     
@@ -433,18 +436,18 @@ st.markdown("""
     }
     
     .success-box:hover {
-        transform: translateX(5px);
-        box-shadow: 0 5px 20px rgba(16, 185, 129, 0.3);
+        transform: translateX(3px);
+        box-shadow: 0 3px 12px rgba(16, 185, 129, 0.2);
     }
     
     /* Image Container - Enhanced */
     .image-container {
-        border-radius: 15px;
+        border-radius: 10px;
         overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        margin: 1rem 0;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        animation: fadeInScale 0.6s ease-out;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        margin: 0.8rem 0;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: fadeInScale 0.5s ease-out;
         position: relative;
     }
     
@@ -472,8 +475,8 @@ st.markdown("""
     }
     
     .image-container:hover {
-        transform: scale(1.02);
-        box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
+        transform: scale(1.01);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
     }
     
     .image-container:hover::before {
@@ -482,13 +485,13 @@ st.markdown("""
     
     /* Metric Enhancement */
     div[data-testid="stMetricValue"] {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 700;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        animation: fadeIn 0.8s ease-out;
+        animation: fadeIn 0.6s ease-out;
     }
     
     @keyframes fadeIn {
@@ -507,41 +510,41 @@ st.markdown("""
     
     /* Alert Boxes Enhancement */
     .stAlert {
-        border-radius: 15px;
-        animation: slideInLeft 0.5s ease-out;
+        border-radius: 10px;
+        animation: slideInLeft 0.4s ease-out;
         transition: all 0.3s ease;
     }
     
     .stAlert:hover {
-        transform: translateX(5px);
+        transform: translateX(3px);
     }
     
     /* Detection Box Styles - Color Coded and Animated */
     .detection-high {
         background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-        border-left: 5px solid #10b981;
-        padding: 1rem;
-        border-radius: 10px;
-        margin: 0.5rem 0;
-        animation: bounceIn 0.6s ease-out;
+        border-left: 4px solid #10b981;
+        padding: 0.8rem;
+        border-radius: 8px;
+        margin: 0.4rem 0;
+        animation: bounceIn 0.5s ease-out;
     }
     
     .detection-medium {
         background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
-        border-left: 5px solid #fb923c;
-        padding: 1rem;
-        border-radius: 10px;
-        margin: 0.5rem 0;
-        animation: bounceIn 0.6s ease-out;
+        border-left: 4px solid #fb923c;
+        padding: 0.8rem;
+        border-radius: 8px;
+        margin: 0.4rem 0;
+        animation: bounceIn 0.5s ease-out;
     }
     
     .detection-low {
         background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
-        border-left: 5px solid #ef4444;
-        padding: 1rem;
-        border-radius: 10px;
-        margin: 0.5rem 0;
-        animation: bounceIn 0.6s ease-out;
+        border-left: 4px solid #ef4444;
+        padding: 0.8rem;
+        border-radius: 8px;
+        margin: 0.4rem 0;
+        animation: bounceIn 0.5s ease-out;
     }
     
     @keyframes bounceIn {
@@ -593,34 +596,34 @@ st.markdown("""
     /* Section Dividers */
     hr {
         border: none;
-        height: 2px;
+        height: 1px;
         background: linear-gradient(90deg, transparent 0%, #667eea 50%, transparent 100%);
-        margin: 2rem 0;
-        animation: fadeIn 1s ease-out;
+        margin: 1.5rem 0;
+        animation: fadeIn 0.8s ease-out;
     }
     
     /* Radio Buttons - Enhanced */
     .stRadio > div {
         background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-        padding: 1rem;
-        border-radius: 15px;
+        padding: 0.8rem;
+        border-radius: 10px;
         border: 1px solid #e2e8f0;
         transition: all 0.3s ease;
     }
     
     .stRadio > div:hover {
         border-color: #667eea;
-        box-shadow: 0 3px 10px rgba(102, 126, 234, 0.15);
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.12);
     }
     
     /* Camera Input */
     [data-testid="stCameraInput"] {
-        border-radius: 15px;
+        border-radius: 10px;
         transition: all 0.3s ease;
     }
     
     [data-testid="stCameraInput"]:hover {
-        box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+        box-shadow: 0 3px 15px rgba(102, 126, 234, 0.18);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -656,7 +659,6 @@ def main():
     # Sidebar Configuration
     with st.sidebar:
         st.markdown("## Detection Settings")
-        st.markdown("<div style='height: 0.5rem;'></div>", unsafe_allow_html=True)
         
         confidence_threshold = st.slider(
             "Confidence Threshold",
@@ -692,7 +694,6 @@ def main():
             help="Maximum number of detections per image"
         )
         
-        st.markdown("<div style='height: 1rem;'></div>", unsafe_allow_html=True)
         st.markdown("### Advanced Options")
         
         use_tta = st.checkbox(
@@ -701,13 +702,12 @@ def main():
             help="Slower but may improve detection accuracy"
         )
         
-        st.markdown("<div style='height: 1rem;'></div>", unsafe_allow_html=True)
         st.markdown("### Display Options")
         show_labels = st.checkbox("Show Labels", value=True)
         show_confidence = st.checkbox("Show Confidence Scores", value=True)
         show_boxes = st.checkbox("Show Bounding Boxes", value=True)
         
-        st.markdown("<div style='height: 2rem;'></div>", unsafe_allow_html=True)
+        st.markdown("---")
         st.markdown("## Model Information")
         
         with st.expander("Model Details", expanded=False):
@@ -750,7 +750,6 @@ def main():
             """)
     
     # Main Content Area - Clean 2026 Design
-    st.markdown("<br>", unsafe_allow_html=True)
     
     # Check model file size and warn if it seems untrained
     if os.path.exists('best.pt'):
@@ -775,7 +774,7 @@ The model file size is small ({:.1f} MB), suggesting it may not be fully trained
     col1, col2 = st.columns([1, 1], gap="large")
     
     with col1:
-        st.markdown("### Get Fish Image")
+        st.markdown("### 📸 Get Fish Image")
         
         # Input method selector
         input_method = st.radio(
@@ -788,7 +787,7 @@ The model file size is small ({:.1f} MB), suggesting it may not be fully trained
         image = None
         
         if input_method == "📤 Upload Image":
-            st.markdown("<p style='color: #6c757d; margin-bottom: 1.5rem;'>Drag and drop or click to upload JPG, JPEG, or PNG images</p>", unsafe_allow_html=True)
+            st.markdown("<p style='color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;'>Drag and drop or click to upload JPG, JPEG, or PNG images</p>", unsafe_allow_html=True)
             
             uploaded_file = st.file_uploader(
                 "Choose a fish image...",
@@ -801,7 +800,7 @@ The model file size is small ({:.1f} MB), suggesting it may not be fully trained
                 image = Image.open(uploaded_file)
         
         else:  # Take Photo
-            st.markdown("<p style='color: #6c757d; margin-bottom: 1.5rem;'>Click the button below to capture an image from your camera</p>", unsafe_allow_html=True)
+            st.markdown("<p style='color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;'>Click the button below to capture an image from your camera</p>", unsafe_allow_html=True)
             
             camera_photo = st.camera_input(
                 "Take a photo",
@@ -820,8 +819,7 @@ The model file size is small ({:.1f} MB), suggesting it may not be fully trained
             st.markdown('</div>', unsafe_allow_html=True)
             
             # Detection button with modern styling - Cleaner spacing
-            st.markdown("<br>", unsafe_allow_html=True)
-            detect_button = st.button("Detect Fish", type="primary", use_container_width=True)
+            detect_button = st.button("🔍 Detect Fish", type="primary", use_container_width=True)
             
             if detect_button:
                 # Progress bar for detection
@@ -886,7 +884,7 @@ The model file size is small ({:.1f} MB), suggesting it may not be fully trained
                 
                 # Display results in col2
                 with col2:
-                    st.markdown("### Detection Results")
+                    st.markdown("### 🎯 Detection Results")
                     
                     # Annotated image
                     annotated_img = result.plot(
@@ -902,8 +900,7 @@ The model file size is small ({:.1f} MB), suggesting it may not be fully trained
                     st.markdown('</div>', unsafe_allow_html=True)
                     
                     # Statistics Cards
-                    st.markdown("<div style='height: 1rem;'></div>", unsafe_allow_html=True)
-                    st.markdown("### Detection Statistics")
+                    st.markdown("### 📊 Detection Statistics")
                     
                     # Show sardines stat only if sardines are detected
                     if sardine_count > 0:
@@ -968,8 +965,8 @@ The model file size is small ({:.1f} MB), suggesting it may not be fully trained
                     
                     # Detailed Detections
                     if detections:
-                        st.markdown("<div style='height: 1.5rem;'></div>", unsafe_allow_html=True)
-                        st.markdown("### Detailed Detection List")
+                        st.markdown("---")
+                        st.markdown("### 📋 Detailed Detection List")
                         
                         # Summary metrics
                         avg_confidence = np.mean([d['confidence'] for d in detections])
@@ -1023,8 +1020,8 @@ The model file size is small ({:.1f} MB), suggesting it may not be fully trained
                         st.info("No fish detected. Try adjusting the confidence threshold in the sidebar.")
                     
                     # Download Section
-                    st.markdown("<div style='height: 2rem;'></div>", unsafe_allow_html=True)
-                    st.markdown("### Download Results")
+                    st.markdown("---")
+                    st.markdown("### 💾 Download Results")
                     
                     col_dl1, col_dl2 = st.columns(2)
                     
@@ -1069,7 +1066,7 @@ DETECTIONS:
                         )
     
     # Footer with modern design
-    st.markdown("<div style='height: 3rem;'></div>", unsafe_allow_html=True)
+    st.markdown("---")
     
     # Quick Tips Section
     with st.expander("Quick Tips for Best Results", expanded=False):
@@ -1133,17 +1130,17 @@ DETECTIONS:
         """)
     
     # Footer
-    st.markdown("<div style='height: 2rem;'></div>", unsafe_allow_html=True)
+    st.markdown("---")
     st.markdown("""
-    <div style='text-align: center; padding: 2rem 0; color: #6c757d; border-top: 1px solid #e2e8f0;'>
-        <h3 style='color: #667eea; margin-bottom: 1rem;'>SardineVision AI</h3>
-        <p style='font-size: 1.1rem; margin-bottom: 0.5rem;'>
+    <div style='text-align: center; padding: 1.5rem 0; color: #6c757d;'>
+        <h3 style='color: #667eea; margin-bottom: 0.5rem; font-size: 1.3rem;'>🐟 SardineVision AI</h3>
+        <p style='font-size: 1rem; margin-bottom: 0.3rem;'>
             <strong>Advanced Fish Detection System</strong> | Powered by YOLOv8
         </p>
-        <p style='font-size: 0.95rem;'>
-            Task 1: Detection & Counting | Trained on 4,645 images | 19 species including Sardines
+        <p style='font-size: 0.9rem; margin-bottom: 0.2rem;'>
+            Task 1: Detection & Counting | Trained on 4,645 images | 19 species
         </p>
-        <p style='font-size: 0.85rem; margin-top: 1rem; color: #9ca3af;'>
+        <p style='font-size: 0.8rem; margin-top: 0.5rem; color: #9ca3af;'>
             Built with Streamlit • Ultralytics YOLOv8 • OpenCV • PyTorch
         </p>
     </div>
