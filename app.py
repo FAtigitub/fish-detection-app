@@ -1094,9 +1094,10 @@ DETECTIONS:
             """)
     
     # Species Reference
-    with st.expander("Complete Species List (13 Detected) - Detection Performance", expanded=False):
+    with st.expander("Species List (12 of 19 in Validation) - Detection Performance", expanded=False):
         st.markdown("""
-        **Legend:** 🟢 Highest Accuracy | ✅ Good Performance | ⚠️ Needs Improvement | 🔴 Not Detecting
+        **Legend:** 🟢 Highest Accuracy | ✅ Good Performance | ⚠️ Needs Improvement | 🔴 Not Detecting  
+        **Note:** Model trained on 19 species total. Validation set contains 12 species shown below.
         """)
         
         col_sp1, col_sp2 = st.columns(2)
